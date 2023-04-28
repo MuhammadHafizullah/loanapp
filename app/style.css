@@ -1,0 +1,177 @@
+:root {
+    --clr-primary:#8F724A;
+    --clr-gray:#555555;
+    --clr-white:#fff;
+    --clr-error:#ff1c07;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 400ms;
+  }
+  
+  body, html {
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("./images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  
+  input:focus,
+  select:focus,
+  button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .title {
+    color: var(--clr-white);
+  }
+  
+  .btn-default {
+    background: white;
+    border: 1px solid #ef374a;
+    color: #444;
+  }
+  
+  .btn-restart {
+    background: white;
+    padding: 12px;
+    border: 1px transparent;
+    color: #444;
+  }
+  
+  .btn-select-product {
+    text-transform: capitalize;
+    font-size: 0.88em;
+    border: 1px transparent;
+    background: white;
+    color: #555;
+    height: 160px;
+    width: 160px;
+    white-space: normal;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+  
+  .btn-select-product i.fa,
+  .btn-select-product i.fas,
+  .btn-select-product i.fab {
+    display: block;
+    margin: 20px 0 10px;
+    color: var(--clr-primary);
+  }
+  
+  .btn-select-product:hover {
+    background: var(--clr-primary);
+    color: var(--clr-white);
+  }
+  
+  .btn-select-product:hover,
+  .btn-select-product:hover i.fa,
+  .btn-select-product:hover i.fas,
+  .btn-select-product:hover i.fab {
+    color: #fff;
+  }
+  
+  @media (max-width: 991px) {
+    .btn-select-product {
+      height: auto;
+      border-radius: 10px;
+      width: 232px;
+      margin-bottom: 15px;
+    }
+    .btn-select-product i.fa,
+    .btn-select-product i.fas,
+    .btn-select-product i.fab {
+      font-size: 2em;
+      margin-top: 10px;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1180px) {
+    .btn-select-product {
+      height: 120px;
+      width: 120px;
+      border-radius: 50%;
+    }
+    .btn-select-product i.fa,
+    .btn-select-product i.fas,
+    .btn-select-product i.fab {
+      font-size: 2em;
+      margin-top: 10px;
+    }
+  }
+  .btn-select-credit_score,
+  .btn-select-income_type {
+    width: 100%;
+    border: 1px solid var(--clr-primary);
+    margin-block: 5px;
+  }
+  
+  .btn-select-credit_score:hover,
+  .btn-select-income_type:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+  }
+  
+  .step button:active {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+  }
+  
+  .panel {
+    background-color: var(--clr-white);
+    max-width: 700px;
+    border-radius: 6px;
+  }
+  
+  .btn-next, .btn-submit {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+  }
+  
+  .btn-lg:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+  }
+  
+
+  .hidden-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .checkbox-label {
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid var(--clr-primary);
+    cursor: pointer;
+    color: var(--clr-primary);
+    margin-bottom: 10px;
+  }
+  
+  .checkbox-label:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+  }
+  
+  .hidden-checkbox:checked + .checkbox-label {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+  }
+  
+  .error-msg {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--clr-error);
+  }

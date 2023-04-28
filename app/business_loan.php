@@ -1,0 +1,337 @@
+<?php include("header.php");?>
+
+
+            <h1 class="text-center text-white col-sm-10 mx-auto">Grow Your Business With Lionsgate Financial Group</h1>
+            <div class="row preloaded_app panel panel-default mx-auto mt-4 py-4">
+                <div class="panel-body">
+                    <div class="row">
+                        <h2 class='panel-subheading text-center'>
+                        Get Your FREE Quote Today
+                        </h2>
+                        <div id="preloaded_app-container">
+                            <div class="row">
+                                <div class="col-sm-10 mx-auto">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar"
+                                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                            <span class="completed">0% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <form id="form" method="post" autocomplete="off" class="row g-3 mt-4 form needs-validation" novalidate>
+
+                            
+                            <input type="hidden" name="asset_financing" id="product_name" value="mortage_renewal">
+
+                            <div id="step0" class="step">
+                                    <h4 class="text-center my-3">Business Financing Request</h4>
+                                    <div class="form-group col-md-6 mx-auto mt-3">
+                                        <label for="requested_amount">Desired Loan Amount</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text">$</div>
+                                            <input type="text" id="requested_amount" name="requested_amount"
+                                                placeholder="Loan Amount" class="form-control digits required"
+                                                maxlength="6">
+                                        </div>
+                                    </div>
+
+                                    <div class="col text-center">
+                                        <span class="error-msg" style="display: none;">
+                                            This field is required!
+                                        </span>
+                                    </div>
+
+                            </div>
+                            <div id="step1" class="step" style="display:none">
+                                    <div class="col-3 mx-auto text-center" id="loading_icon" style="display: none;">
+                                        <img src="./images/1496 (1).gif" alt="">
+                                    </div>
+                                    <h3 class="text-center" id="response"></h3>
+                                    <div class="form-group col-md-6 mx-auto mt-3" id="post_code">
+                                        <label for="postal_code">Enter Your Postal Code</label>
+                                        <input type="text"
+                                            id="postal_code" name="postal_code" placeholder="A9A9A9"
+                                            class="form-control required validate_postal" maxlength="6" minlength="6">
+                                    </div>
+                                    <div class="col text-center">
+                                        <span class="error-msg" style="display: none;">
+                                            Postal code should be in F9F9F9 form!
+                                        </span>
+                                    </div>
+                            </div> 
+                            <div id="step2" class="step" style="display:none">
+                                <div class="form-group col-md-6 mx-auto">
+                                    <label class="mb-1" for="business_start_date">Business Start Date</label>
+                                    <input type="date" id="business_start_date" name="business_start_date" placeholder="2012-06-28" class="form-control date start_biz required" disabled="disabled">
+                                </div>
+                                    <div class="col text-center">
+                                        <span class="error-msg" style="display: none;">
+                                            Please enter business start date!
+                                        </span>
+                                    </div>
+                            </div> 
+                            <div id="step3" class="step" style="display:none">
+                                    <div class="form-group col-md-10 mx-auto mt-3">
+                                        
+                                        <h4 class="text-center">What is your credit score?</h4>
+                                        <div class="row text-center">
+                                            <div class="col-md-6">
+                                                <input type="radio" name="creditScore" id="my-checkbox9" class="hidden-checkbox" value="good">
+                                                <label for="my-checkbox9" class="checkbox-label">700
+                                                    +<br>Good</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="radio" name="creditScore" id="my-checkbox10" class="hidden-checkbox" value="fair">
+                                                <label for="my-checkbox10" class="checkbox-label">561 -
+                                                    700<br>Fair</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="radio" name="creditScore" id="my-checkbox11" class="hidden-checkbox" value="low">
+                                                <label for="my-checkbox11" class="checkbox-label">&lt;
+                                                    560<br>Low</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="radio" name="creditScore" id="my-checkbox12" class="hidden-checkbox" value="not sure">
+                                                <label for="my-checkbox12" class="checkbox-label">???<br>Not Sure</label>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col text-center">
+                                            <span class="error-msg" style="display: none;">
+                                                Please select you credit score!
+                                            </span>
+                                        </div>
+                                        
+                                    </div>
+                            </div>
+                            <div class="step row" id="step4" style="display: none;">
+                                    <div class="form-group col-md-12">
+                                        <label class="mb-1" for="canadian_status">Are you a Canadian citizen / permanent resident ?</label>
+                                        <select id="canadian_status" name="canadian_status" class="form-control form-select required" disabled="disabled">
+                                            <option value="">Choose...</option>
+                                            <option value="pr">Permanent Resident</option>
+                                            <option value="citizen">Citizen</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                        <div class="form-group col-md-6">
+                                                <label class="mb-1" for="income_noa_1">Notice of Assement (NOA)<br>Income last year</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fa fa-dollar-sign"></i></span>
+                                            <input type="text" id="income_noa_1" name="income_noa_1" placeholder="60000" class="form-control required digits" disabled="disabled" maxlength="8">
+                                            </div>
+                                        </div>
+                                <div class="form-group col-md-6">
+                                    <label class="mb-1" for="income_noa_2">Notice of Assement (NOA) <br>Income year before last</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fa fa-dollar-sign"></i></span>
+                                        <input type="text" id="income_noa_2" name="income_noa_2" placeholder="50000" class="form-control required digits" disabled="disabled" maxlength="8">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="mb-1" for="equity_liquid">Liquid equity <br>(cash, stocks, bonds, ETFs)</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fa fa-dollar-sign"></i></span>
+                                        <input type="text" id="equity_liquid" name="equity_liquid" placeholder="20000" class="form-control required digits" disabled="disabled" maxlength="8">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="mb-1" for="equity_non_liquid">Non-liquid equity <br>(equipment, real estate, vehicles)</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fa fa-dollar-sign"></i></span>
+                                        <input type="text" id="equity_non_liquid" name="equity_non_liquid" placeholder="50000" class="form-control required digits" disabled="disabled" maxlength="8">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step row" id="step5" style="display: none;">
+                                    <div class="form-group col-md-6">
+                                        <label class="mb-1" for="company_name">Company Name</label>
+                                    <input type="text" id="company_name" name="company_name" placeholder="Company Name" class="form-control required" disabled="disabled">
+                                </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="mb-1" for="monthly_gross_sales">Gross Sales (Monthly)</label>
+                                    <input type="text" id="monthly_gross_sales" name="monthly_gross_sales" placeholder="50000" class="form-control required digits" disabled="disabled" maxlength="8">
+                                </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="mb-1" for="monthly_card_sales">Gross Sales (Debit &amp; Credit Only)</label>
+                                    <input type="text" id="monthly_card_sales" name="monthly_card_sales" placeholder="From debit/credit cards" class="form-control required digits" disabled="disabled" maxlength="8">
+                                </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="mb-1" for="business_type">Industry</label>
+                                    <select id="business_type" name="business_type" class="form-control form-select required" disabled="disabled">
+                                        <option value="">Choose...</option>
+                                    <option value="ACCOUNTING">ACCOUNTING</option>
+                                    <option value="AGRICULTURE_FARMING">AGRICULTURE FARMING</option>
+                                    <option value="ANIMAL_BOARDING">ANIMAL BOARDING</option>
+                                    <option value="APPAREL_ACCESSORIES">APPAREL ACCESSORIES</option>
+                                    <option value="AUTO_TRUCK_DEALERSHIP">AUTO TRUCK DEALERSHIP</option>
+                                    <option value="AUTO_BODY">AUTO BODY</option>
+                                    <option value="AUTO_RENTAL">AUTO RENTAL</option>
+                                    <option value="BEAUTY_SALON_BARBER_SHOP">BEAUTY SALON BARBER SHOP</option>
+                                    <option value="BUILDING_MATERIALS">BUILDING MATERIALS</option>
+                                    <option value="BUSINESS_SERVICES">BUSINESS SERVICES</option>
+                                    <option value="CAR_WASH">CAR WASH</option>
+                                    <option value="CELLULAR_WIRELESS_STORE">CELLULAR WIRELESS STORE</option>
+                                    <option value="CHILD_EDUCATION">CHILD EDUCATION</option>
+                                    <option value="CONSULTING">CONSULTING</option>
+                                    <option value="DAY_CARE_SERVICES">DAY CARE SERVICES</option>
+                                    <option value="DOCTOR">DOCTOR</option>
+                                    <option value="ELECTRONICS_COMPUTERS">ELECTRONICS COMPUTERS</option>
+                                    <option value="ENTERTAINMENT">ENTERTAINMENT</option>
+                                    <option value="EQUIPMENT_RENTAL">EQUIPMENT RENTAL</option>
+                                    <option value="FABRICATION">FABRICATION</option>
+                                    <option value="FINANCIAL_SERVICES">FINANCIAL SERVICES</option>
+                                    <option value="FRANCHISE">FRANCHISE</option>
+                                    <option value="FUNERAL_HOME">FUNERAL HOME</option>
+                                    <option value="GAMING">GAMING</option>
+                                    <option value="GAS_STATION">GAS STATION</option>
+                                    <option value="GENERAL_CONTRACTOR">GENERAL CONTRACTOR</option>
+                                    <option value="GENERAL_MERCHANDISE_STORE">GENERAL MERCHANDISE STORE</option>
+                                    <option value="GROCERY_CONVENIENCE_STORE">GROCERY CONVENIENCE STORE</option>
+                                    <option value="GUNS_AMMUNITION_STORE">GUNS AMMUNITION STORE</option>
+                                    <option value="GYM_FITNESS_TRAINER">GYM FITNESS TRAINER</option>
+                                    <option value="HEALTH_SERVICES">HEALTH SERVICES</option>
+                                    <option value="HOME_FURNISHINGS">HOME FURNISHINGS</option>
+                                    <option value="HOTEL_MOTEL">HOTEL/MOTEL</option>
+                                    <option value="HVAC">HVAC</option>
+                                    <option value="INSURANCE_BROKERS">INSURANCE BROKERS</option>
+                                    <option value="INTERNET_RETAILER">INTERNET RETAILER</option>
+                                    <option value="LANDSCAPING_SERVICES">LANDSCAPING SERVICES</option>
+                                    <option value="LAUNDRY_GARMENT_SERVICES">LAUNDRY GARMENT SERVICES</option>
+                                    <option value="LAW_FIRM">LAW FIRM</option>
+                                    <option value="LEGAL_COUNSEL">LEGAL COUNSEL</option>
+                                    <option value="LOCKSMITH">LOCKSMITH</option>
+                                    <option value="MANUFACTURING">MANUFACTURING</option>
+                                    <option value="MARKETING">MARKETING</option>
+                                    <option value="MEDIA_PRODUCTION">MEDIA PRODUCTION</option>
+                                    <option value="MEDICAL_HEALTHCARE">MEDICAL HEALTHCARE</option>
+                                    <option value="NAIL_SALON">NAIL SALON</option>
+                                    <option value="OIL_INDUSTRY">OIL INDUSTRY</option>
+                                    <option value="OTHER">OTHER</option>
+                                    <option value="PHOTOGRAPHY_STUDIO">PHOTOGRAPHY STUDIO</option>
+                                    <option value="POOL_SERVICES">POOL SERVICES</option>
+                                    <option value="PRINTING">PRINTING</option>
+                                    <option value="REAL_ESTATE_RELATED">REAL ESTATE RELATED</option>
+                                    <option value="RECREATION">RECREATION</option>
+                                    <option value="RESIDENTIAL_CONTRACTOR">RESIDENTIAL CONTRACTOR</option>
+                                    <option value="RESTAURANT_CAFE_BAR">RESTAURANT CAFE BAR</option>
+                                    <option value="RETAIL_STORE">RETAIL STORE</option>
+                                    <option value="SANITATION">SANITATION</option>
+                                    <option value="SECURITY_SERVICES">SECURITY SERVICES</option>
+                                    <option value="SENIOR_CARE_ASSISTED_LIVING">SENIOR CARE ASSISTED LIVING</option>
+                                    <option value="SMOKE_SHOP">SMOKE SHOP</option>
+                                    <option value="SOLAR">SOLAR</option>
+                                    <option value="SPA_SERVICES">SPA SERVICES</option>
+                                    <option value="STAFFING">STAFFING</option>
+                                    <option value="TANNING_SALON">TANNING SALON</option>
+                                    <option value="TAX_PREPARATION">TAX PREPARATION</option>
+                                    <option value="TECHNOLOGY_COMPANY">TECHNOLOGY COMPANY</option>
+                                    <option value="TRAVEL_TRANSPORTATION">TRAVEL TRANSPORTATION</option>
+                                    <option value="UNIFORM_SUPPLIER">UNIFORM SUPPLIER</option>
+                                    <option value="VETERINARY_CLINIC">VETERINARY CLINIC</option>
+                                    <option value="WASTE_MANAGEMENT">WASTE MANAGEMENT</option>
+                                    <option value="WHOLESALER">WHOLESALER</option>
+                                    <option value="WINE_LIQUOR_STORE">WINE LIQUOR STORE</option>
+                                </select>
+                                </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="mb-1" for="payment_processor">Who is your payment processor?</label>
+                                    <select id="payment_processor" name="payment_processor" class="form-control form-select required" disabled="disabled">
+                                        <option value="">Choose...</option>
+                                    <option value="CHASE_PAYMENTECH">CHASE PAYMENTECH</option>
+                                    <option value="DEBITECH">DEBITECH</option>
+                                    <option value="DESJARDINS">DESJARDINS</option>
+                                    <option value="ELAVON">ELAVON</option>
+                                    <option value="EVERLINK">EVERLINK</option>
+                                    <option value="FIRST_DATA">FIRST DATA</option>
+                                    <option value="GLOBAL_PAYMENTS">GLOBAL PAYMENTS</option>
+                                    <option value="MERCURY_PAYMENTS">MERCURY PAYMENTS</option>
+                                    <option value="MONERIS">MONERIS</option>
+                                    <option value="MONEX">MONEX</option>
+                                    <option value="PAYFIRMA">PAYFIRMA</option>
+                                    <option value="PIVOTAL_PAYMENTS">PIVOTAL PAYMENTS</option>
+                                    <option value="POS_WEST">POS WEST</option>
+                                    <option value="SQUARE">SQUARE</option>
+                                    <option value="STRIPE">STRIPE</option>
+                                    <option value="TD_MERCHANT_SERVICES">TD MERCHANT SERVICES</option>
+                                    <option value="OTHER">AUTRE</option>
+                                    <option value="NONE">AUCUN</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="step row" id="step6" style="display: none;">
+                                    <div class="form-group col-md-6">
+                                        <label class="mb-1" for="first_name">First Name</label>
+                                    <input type="text" id="first_name" name="first_name" placeholder="First Name" class="form-control required" disabled="disabled">
+                                </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="mb-1" for="last_name">Last Name</label>
+                                    <input type="text" id="last_name" name="last_name" placeholder="Last Name" class="form-control required" disabled="disabled">
+                                </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="mb-1" for="home_phone">Primary Phone</label>
+                                    <input type="text" id="home_phone" name="home_phone" placeholder="Phone" class="form-control required validate-phone digits" disabled="disabled" maxlength="10" minlength="10">
+                                </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="mb-1" for="work_phone">Work Phone</label>
+                                    <input type="text" id="work_phone" name="work_phone" placeholder="Phone" class="form-control required validate-phone digits hide-for-short-version" disabled="disabled" maxlength="10" minlength="10">
+                                </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="mb-1" for="email">Email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                    <input type="text" id="email" name="email" placeholder="your@email.com" class="form-control required email validate_email" disabled="disabled">
+                                </div>
+                                </div>
+                                    <div class="form-group col-md-6 hide">
+                                        <label class="mb-1" for="city">City</label>
+                                    <input type="text" id="city" name="city" placeholder="City" class="form-control required" disabled="disabled">
+                                </div>
+                                    <div class="form-group col-md-6 hide">
+                                        <label class="mb-1" for="state">Province</label>
+                                    <select id="state" name="state" class="form-control form-select required" disabled="disabled">
+                                        <option value="">Choose...</option>
+                                    <option value="AB">Alberta</option>
+                                    <option value="BC">British Columbia</option>
+                                    <option value="MB">Manitoba</option>
+                                    <option value="NB">New Brunswick</option>
+                                    <option value="NL">Newfoundland and Labrador</option>
+                                    <option value="NS">Nova Scotia</option>
+                                    <option value="NT">Northwest Territories</option>
+                                    <option value="NU">Nunavut</option>
+                                    <option value="ON">Ontario</option>
+                                    <option value="PE">Prince Edward Island</option>
+                                    <option value="QC">Québec</option>
+                                    <option value="SK">Saskatchewan</option>
+                                    <option value="YT">Yukon</option>
+                                </select>
+                                </div>
+                                    <div class="form-group col-md-12">
+                                        <label class="mb-1 checkbox" for="opt_in">
+                                        <input type="checkbox" id="opt_in" name="opt_in" disabled="disabled" class="me-2">
+                                    <small>I would like to receive electronic messages from Lionsgate Financial Group containing news, updates and promotions regarding its products and services, including third party promotions (you can withdraw your consent at any time). This request is made by Lionsgate Financial Group Email communications are sent via Lionsgate Financial Group's mailing systems.</small>
+                                </label>
+                                </div>
+                                    <div class="text-center py-2">
+                                        <small>By continuing with this form, you consent, acknowledge, and agree to our <a href="https://lionsgatefinancialgroup.ca/privacy-policy" target="_blank">privacy policy</a> including lionsgatefinancialgroup.ca and/or its other partners contacting you by phone or e-mail to respond to (or request feedback from) your request.</small>
+                                    </div>
+                            </div>
+
+                                <div class="row mt-3">
+                                    <div class="text-center">
+                                        <button class="btn-preloaded_app-next btn btn-lg btn-green btn-next">Next</button>
+                                        <button type="submit" class="btn-preloaded_app-next btn btn-lg btn-green btn-submit">Submit</button>
+                                    </div>
+                                </div>
+
+                            
+                            
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<?php include("footer.php"); ?>
